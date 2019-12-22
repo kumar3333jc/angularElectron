@@ -6,28 +6,7 @@
     "type": "git",
     "url": "https://github.com/kumar3333jc/angularElectron.git"
   },
-  "build": {
-    "appId": "FORM10FA",
-    "productName": "FORM10FA",
-    "win": {
-      "asar": false,
-      "target": [
-        {
-          "target": "portable",
-          "arch": [
-            "ia32"
-          ]
-        }
-      ],
-      "icon": "src/assets/images/Preview.jpg"
-    },
-    "directories": {
-      "output": "exefolder"
-    },
-    "files": [
-      "!src"
-    ]
-  },
+  
   "publish":{
           "provider": "github",
              "owner": "kumar3333jc",
