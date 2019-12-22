@@ -38,7 +38,7 @@
     "postinstall": "install-app-deps",
     "run": "ng build --prod --base-href ./ && electron .",
     "pack": "ng build --prod --base-href ./ && electron-builder build   --win --publish always",
-    "deploy": "ng build --prod --base-href ./ && electron-builder build   --win --publish always"
+    "deploy": " electron-builder build   --win --publish always"
   },
   "private": true,
   "dependencies": {
