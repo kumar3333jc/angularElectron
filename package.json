@@ -1,6 +1,6 @@
 {
   "name": "FORM10FA",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "entry.js",
   "repository": {
     "type": "git",
@@ -19,12 +19,12 @@
             "ia32"
           ]
         }
-      ],  "publish":{
+      ], 
+       "publish":{
         "provider": "github",
            "owner": "kumar3333jc",
            "repo": "angularElectron"
-          
-},
+ },
  
 
       "icon": "src/assets/images/Preview.jpg"
