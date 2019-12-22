@@ -22,8 +22,8 @@
       ],  "publish":{
         "provider": "github",
            "owner": "kumar3333jc",
-           "repo": "angularElectron",
-           "token":" 9f2cb2798fcd606fb1858d1e0bae84c47daaaac4"
+           "repo": "angularElectron"
+          
 },
  
 
