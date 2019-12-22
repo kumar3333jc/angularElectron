@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head myid="ITD_Wizard_id_2" container="${CONTAINER}" dir="${DIR}">
+    <base href="/">
+    <link class="angularskip uniservenxtImport" rel="stylesheet"
+        href="assets/DefaultDependentFiles/FormBuilder/css/usn_nxt_all.min.css">
+    <script class="angularskip uniservenxtImport"
+        src="assets/DefaultDependentFiles/FormBuilder/js/usn_nxt_all.min.js"></script>
+    <meta charset="utf-8" myid="ITD_Wizard_id_3" container="${CONTAINER}" dir="${DIR}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" myid="ITD_Wizard_id_4"
+        container="${CONTAINER}" dir="${DIR}">
+    <meta name="description" content="" myid="ITD_Wizard_id_5" container="${CONTAINER}" dir="${DIR}">
+    <meta name="author" content="" myid="ITD_Wizard_id_6" container="${CONTAINER}" dir="${DIR}">
+    <title myid="ITD_Wizard_id_7" container="${CONTAINER}" dir="${DIR}" i18nkey="zform.ITD_Wizard.ITD_Wizard_id_7">IT
+        Deptt.</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css" myid="ITD_Wizard_id_8" container="${CONTAINER}"
+        dir="${DIR}">
+    <script class="angularskip offlineI18nObjects" id="offlineI18nObjects"
+        src="assets/js/offlineI18nObjects.js"></script>
+    <link class="layoutStyles" href="assets/css/layout_styles.css">
+
+    <style>
+    
+
+        #notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  display: none;
+}
+    </style>
+</head>
+
+<body>
+
+    <app-root></app-root>
+
+    <div id="mask"
+        style="display: none; padding: 10px; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 50; background-color: #606060; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50); -moz-opacity: .5; opacity: .5;">
+        <div style="top: 50%; left: 40%; position: absolute;">
+            <div
+                style="background-color: black; border-radius: 7px; border: 1px solid white; padding: 2px 5px; color: white;">
+                <i class="fa fa-spinner fa-pulse fa-2x"></i>&nbsp;&nbsp;
+                <span style="font-size: 20px">This may take a moment...</span>
+            </div>
+        </div>
+    </div>
+    <script class='layoutScripts' src='assets/js/layout_scripts.js'></script>
+    <script type="text/javascript" src="assets/PluginBuilder/bootstrapaccordion1/1.0.1/js/plugin.js" myid="Page1_509"
+        container=" " dir="ltr">
+        </script>
+    <script type="text/javascript" src="assets/PluginBuilder/bootstrapaccordion1/1.0.1/js/properties.js"
+        myid="Page1_510" container=" " dir="ltr">
+        </script>
+    <script type="text/javascript" src="assets/PluginBuilder/BootstrapColorTab/1.0.1/js/plugin.js" myid="Page1_539"
+        container=" " dir="ltr">
+        </script>
+    <script type="text/javascript" src="assets/PluginBuilder/BootstrapColorTab/1.0.1/js/properties.js" myid="Page1_540"
+        container=" " dir="ltr">
+        </script>
+    <script type="text/javascript" src="assets/PluginBuilder/bootstrapaccordion1/1.0.1/js/plugin.js" myid="page2_59"
+        container=" " dir="ltr">
+        </script>
+    <script type="text/javascript" src="assets/PluginBuilder/bootstrapaccordion1/1.0.1/js/properties.js" myid="page2_60"
+        container=" " dir="ltr">
+        </script>
+    <script class='allPageScripts' src='assets/js/allPageScripts.js'></script>
+    <script>
+        const { ipcRenderer } = require('electron');
+        const version = document.getElementById('version');
+        const notification = document.getElementById('notification');
+        const message = document.getElementById('message');
+        const restartButton = document.getElementById('restart-button');
+        
+        ipcRenderer.send('app_version');
+        ipcRenderer.on('app_version', (event, arg) => {
+          ipcRenderer.removeAllListeners('app_version');
+          version.innerText = 'Version ' + arg.version;
+        });
+    
+        ipcRenderer.on('update_available', () => {
+          ipcRenderer.removeAllListeners('update_available');
+          message.innerText = 'A new update is available. Downloading now...';
+          notification.classList.remove('hidden');
+        });
+    
+        ipcRenderer.on('update_downloaded', () => {
+          ipcRenderer.removeAllListeners('update_downloaded');
+          message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+          restartButton.classList.remove('hidden');
+          notification.classList.remove('hidden');
+        });
+    
+        function closeNotification() {
+          notification.classList.add('hidden');
+        }
+        
+        function restartApp() {
+          ipcRenderer.send('restart_app');
+        }
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{ 
+    "name":"bootstrapaccordion1",
+	"tooltip":"bootstrapaccordion1",
+	"labelname": "bootstrapaccordion1",
+	"version":"1.0.1",
+	"icon":"collapse.png",
+	"uniqueidentfier":"uniservenxtcmp_bootstrapaccordion1",
+	"category":"ZformPluginManager",
+	"pluginType":"others",
+    "themespecific":{},	
+	"dependentfiles":[],
+	"html":"<div class='uniservenxtcmp_bootstrapaccordion1'></div>"
+}

@@ -1,0 +1,109 @@
+<div *ngIf="applicantsList">
+  <div class="container">
+    <div class="row" id= "myDiv" #genPDF>
+      <h5>Applicant Details</h5>
+      <table class="table" style="width: 50%">
+        <tbody>
+          <tr>
+            <td>Field1</td>
+            <td>{{applicantsList[0].Form1_AO_Field1}}</td>
+          </tr>
+          <tr>
+            <td>Field2</td>
+            <td>{{applicantsList[0].Form1_AO_Field2}}</td>
+          </tr>
+          <tr>
+            <td>Field3</td>
+            <td>{{applicantsList[0].Form1_AO_Field3}}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>{{applicantsList[0].Form1_Individual_Name}}</td>
+          </tr>
+          <tr>
+            <td>Full Address</td>
+            <td>{{applicantsList[0].Form1_page2_fullname_address}}</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td>{{applicantsList[0].Form1_page2_status}}</td>
+          </tr>
+          <tr>
+            <td>Nationality</td>
+            <td>{{applicantsList[0].Form1_page2_nationality}}</td>
+          </tr>
+          <tr>
+            <td>Address</td>
+            <td>{{applicantsList[0].Form1_page2_address}}</td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>{{applicantsList[0].Form1_page2_email_id}}</td>
+          </tr>
+          <tr>
+            <td>PAN/TAN</td>
+            <td>{{applicantsList[0].Form1_page2_pan_or_tan}}</td>
+          </tr>
+          <tr>
+            <td>Number</td>
+            <td>{{applicantsList[0].Form1_page2_number}}</td>
+          </tr>
+          <tr>
+            <td>Period</td>
+            <td>{{applicantsList[0].Form1_page2_period}}</td>
+          </tr>
+          <tr>
+            <td>Purpose</td>
+            <td>{{applicantsList[0].Form1_page2_purpose}}</td>
+          </tr>
+          <tr>
+            <td>Other Details</td>
+            <td>{{applicantsList[0].Form1_page2_other_details}}</td>
+          </tr>
+          <tr>
+            <td>First Name</td>
+            <td>{{applicantsList[0].Form1_page3_individulal_firstname}}</td>
+          </tr>
+          <tr>
+            <td>Last Name</td>
+            <td>{{applicantsList[0].Form1_page3_individulal_lastname}}</td>
+          </tr>
+          <tr>
+            <td>Parent Name</td>
+            <td>{{applicantsList[0].Form1_page3_parent_name}}</td>
+          </tr>
+          <tr>
+            <td>Parent Designation</td>
+            <td>{{applicantsList[0].Form1_page3_parent_designation}}</td>
+          </tr>
+          <tr>
+            <td>Day</td>
+            <td>{{applicantsList[0].Form1_page3_day}}</td>
+          </tr>
+          <tr>
+            <td>Month</td>
+            <td>{{applicantsList[0].Form1_page3_month}}</td>
+          </tr>
+          <tr>
+            <td>Place</td>
+            <td>{{applicantsList[0].Form1_page3_place}}</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>{{applicantsList[0].Form1_page3_name}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row" id="printandpdf">
+    <div class="col-md-6 offset-md-3">
+      <button class="btn btn-primary" (click)="pdf()">Save as PDF</button>
+      <button class="btn btn-success" (click)="print()">Print</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="!applicantsList">
+  No Records Found
+</div>
+

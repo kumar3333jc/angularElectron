@@ -1,0 +1,92 @@
+{
+  "name": "FORM10FA",
+  "version": "1.0.0",
+  "main": "entry.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kumar3333jc/angularElectron.git"
+  },
+  "build": {
+    "appId": "FORM10FA",
+    "productName": "FORM10FA",
+    "win": {
+      "asar": false,
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ],
+      "icon": "src/assets/images/Preview.jpg"
+    },
+    "directories": {
+      "output": "exefolder"
+    },
+    "files": [
+      "!src"
+    ]
+  },
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "postinstall": "install-app-deps",
+    "run": "ng build --prod --base-href ./ && electron .",
+    "pack": "ng build --prod --base-href ./ && electron-builder",
+    "deploy": "ng build --prod --base-href ./ && electron-builder build   --win --publish always"
+  },
+  "private": true,
+  "dependencies": {
+    "electron-updater": "^4.2.0",
+    "knex": "^0.20.1",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.13.0",
+    "@angular/animations": "~7.2.0",
+    "@angular/cli": "~7.3.2",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
+    "@ismaestro/ngx-scroll-to-first-invalid": "^2.0.0",
+    "@sweetalert2/ngx-sweetalert2": "^5.1.0",
+    "@types/jasmine": "~2.8.8",
+    "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
+    "bootstrap": "^4.3.1",
+    "codelyzer": "~4.5.0",
+    "core-js": "^2.5.4",
+    "crypto-js": "^3.1.9-1",
+    "electron": "^5.0.1",
+    "electron-builder": "^22.1.0",
+    "html-to-pdfmake": "^1.2.0",
+    "jasmine-core": "~2.99.1",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~3.1.1",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "~2.0.1",
+    "karma-jasmine": "~1.1.2",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "ngx-electron": "^2.2.0",
+    "pdfmake": "^0.1.63",
+    "protractor": "~5.4.0",
+    "rxjs": "~6.3.3",
+    "sweetalert2": "^8.12.1",
+    "ts-node": "~7.0.0",
+    "tslib": "^1.9.0",
+    "tslint": "~5.11.0",
+    "typescript": "~3.2.2",
+    "zone.js": "~0.8.26"
+  }
+}

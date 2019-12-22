@@ -1,0 +1,13 @@
+{ 
+    "name":"BootstrapColorTab",
+	"tooltip":"Bootstrap color tabs",
+	"labelname": "Color tabs",
+	"version":"1.0.1",
+	"icon":"colortabs.png",
+	"uniqueidentfier":"uniservenxtcmp_Bootstrap_colortab1",
+	"category":"ZformPluginManager",
+	"pluginType":"others",
+    "themespecific":{},
+	"dependentfiles":[],
+	"html":"<div class='uniservenxtcmp_Bootstrap_colortab1'></div>"
+}
