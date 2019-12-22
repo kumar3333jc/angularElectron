@@ -29,8 +29,9 @@
     ]
   },
   "publish":{
-    "type": "git",
-    "url": "https://github.com/kumar3333jc/angularElectron.git"
+          "provider": "github",
+             "owner": "kumar3333jc",
+             "repo": "angularElectron" 
   },
   "scripts": {
     "ng": "ng",
