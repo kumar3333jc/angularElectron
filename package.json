@@ -81,7 +81,7 @@
     "codelyzer": "~4.5.0",
     "core-js": "^2.5.4",
     "crypto-js": "^3.1.9-1",
-    "electron": "^5.0.1",
+    "electron": "^15.5.5",
     "electron-builder": "^22.1.0",
     "html-to-pdfmake": "^1.2.0",
     "jasmine-core": "~2.99.1",
